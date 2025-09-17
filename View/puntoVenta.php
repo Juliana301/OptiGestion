@@ -35,56 +35,75 @@
             </div>
         </div>
 
-        <!-- Carrito -->
-        <div class="col-lg-5">
-            <div class="cart p-3 bg-light rounded shadow">
-                <h4>Carrito de Compra</h4>
-                <div class="cart-headers d-flex fw-bold mb-2">
-                    <div class="cart-col-nombre">Nombre</div>
-                    <div class="cart-col-cantidad text-center">Cantidad</div>
-                    <div class="cart-col-descuento text-center">Descuento</div>
-                    <div class="cart-col-eliminar text-center">Eliminar</div>
+       <!-- Carrito -->
+<div class="col-lg-5">
+    <div class="cart p-3 bg-light rounded shadow">
+        <h4>Carrito de Compra</h4>
+        <div class="cart-headers d-flex fw-bold mb-2">
+            <div class="cart-col-nombre">Nombre</div>
+            <div class="cart-col-cantidad text-center">Cantidad</div>
+            <div class="cart-col-descuento text-center">Descuento</div>
+            <div class="cart-col-eliminar text-center">Eliminar</div>
+        </div>
+        <div id="cart-items">
+            <p class="text-muted">No hay productos agregados.</p>
+        </div>
+        
+        <div class="cart-totals mt-3">
+            <table class="table table-borderless mb-0">
+                <tbody>
+                    <tr>
+                        <th>Subtotal:</th>
+                        <td>₡<span id="cart-subtotal">0.00</span></td>
+                    </tr>
+                    <tr>
+                        <th>Descuento:</th>
+                        <td>₡<span id="cart-discount">0.00</span></td>
+                    </tr>
+                    <tr>
+                        <th>IVA (13%):</th>
+                        <td>₡<span id="cart-tax">0.00</span></td>
+                    </tr>
+                    <tr>
+                        <th>Total:</th>
+                        <td>₡<span id="cart-total">0.00</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       <button class="btn btn-primary-custom w-100 mt-3" id="checkout-btn">Finalizar Venta</button>
+        <!-- Botón calculadora -->
+        <button id="toggle-calculator" class="btn btn-secondary mt-3 w-100">
+            <i class="bi bi-calculator"></i> Calculadora
+        </button>
+
+        <!-- Calculadora desplegable -->
+        <div id="calculator" class="calculator bg-light p-3 rounded shadow mt-2" style="display:none;">
+            <input type="text" id="calc-display" class="form-control mb-2 text-end" readonly>
+            <div class="d-grid gap-1">
+                <div class="d-flex gap-1">
+                    <button class="btn btn-dark btn-sm calc-btn">7</button>
+                    <button class="btn btn-dark btn-sm calc-btn">8</button>
+                    <button class="btn btn-dark btn-sm calc-btn">9</button>
+                    <button class="btn btn-warning btn-sm calc-btn">C</button>
                 </div>
-                <div id="cart-items">
-                    <p class="text-muted">No hay productos agregados.</p>
+                <div class="d-flex gap-1">
+                    <button class="btn btn-dark btn-sm calc-btn">4</button>
+                    <button class="btn btn-dark btn-sm calc-btn">5</button>
+                    <button class="btn btn-dark btn-sm calc-btn">6</button>
                 </div>
-
-                <button class="btn btn-primary-custom w-100 mt-3" id="checkout-btn">Finalizar Venta</button>
-
-                <!-- Botón calculadora -->
-                <button id="toggle-calculator" class="btn btn-secondary mt-3 w-100">
-                    <i class="bi bi-calculator"></i> Calculadora
-                </button>
-
-                <!-- Calculadora desplegable -->
-                <div id="calculator" class="calculator bg-light p-3 rounded shadow mt-2" style="display:none;">
-                    <input type="text" id="calc-display" class="form-control mb-2 text-end" readonly>
-                    <div class="d-grid gap-1">
-                        <div class="d-flex gap-1">
-                            <button class="btn btn-dark btn-sm calc-btn">7</button>
-                            <button class="btn btn-dark btn-sm calc-btn">8</button>
-                            <button class="btn btn-dark btn-sm calc-btn">9</button>
-                            <button class="btn btn-warning btn-sm calc-btn">C</button>
-                        </div>
-                        <div class="d-flex gap-1">
-                            <button class="btn btn-dark btn-sm calc-btn">4</button>
-                            <button class="btn btn-dark btn-sm calc-btn">5</button>
-                            <button class="btn btn-dark btn-sm calc-btn">6</button>
-                        </div>
-                        <div class="d-flex gap-1">
-                            <button class="btn btn-dark btn-sm calc-btn">1</button>
-                            <button class="btn btn-dark btn-sm calc-btn">2</button>
-                            <button class="btn btn-dark btn-sm calc-btn">3</button>
-                        </div>
-                        <div class="d-flex gap-1">
-                            <button class="btn btn-dark btn-sm calc-btn">0</button>
-                        </div>
-                    </div>
+                <div class="d-flex gap-1">
+                    <button class="btn btn-dark btn-sm calc-btn">1</button>
+                    <button class="btn btn-dark btn-sm calc-btn">2</button>
+                    <button class="btn btn-dark btn-sm calc-btn">3</button>
+                </div>
+                <div class="d-flex gap-1">
+                    <button class="btn btn-dark btn-sm calc-btn">0</button>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 
 <script>
 const productos = [
