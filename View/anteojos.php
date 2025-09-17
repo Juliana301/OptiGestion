@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ópticas Vitra</title>
+    <title>Óptica Grisol</title>
    <?php IncluirCSS();?>
 </head>
     <body>
@@ -26,7 +26,7 @@
                         <!-- producto-->
                         <div class="col-lg-6 col-xl-4">
                             <div class="card mb-5 mb-xl-0">
-                                <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
+                                <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
                                 <div class="card-body p-5">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
@@ -39,7 +39,7 @@
                           <!-- producto-->
                         <div class="col-lg-6 col-xl-4">
                             <div class="card mb-5 mb-xl-0">
-                                <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
+                                <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
                                 <div class="card-body p-5">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
@@ -52,7 +52,7 @@
                           <!-- producto-->
                         <div class="col-lg-6 col-xl-4">
                             <div class="card mb-5 mb-xl-0">
-                                <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
+                                <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
                                 <div class="card-body p-5">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
@@ -65,7 +65,7 @@
                            <!-- producto-->
                         <div class="col-lg-6 col-xl-4">
                             <div class="card mb-5 mb-xl-0">
-                                <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
+                                <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
                                 <div class="card-body p-5">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
@@ -78,7 +78,7 @@
                            <!-- producto-->
                         <div class="col-lg-6 col-xl-4">
                             <div class="card mb-5 mb-xl-0">
-                                <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
+                                <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
                                 <div class="card-body p-5">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
@@ -91,7 +91,7 @@
                            <!-- producto-->
                         <div class="col-lg-6 col-xl-4">
                             <div class="card mb-5 mb-xl-0">
-                                <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
+                                <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
                                 <div class="card-body p-5">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">

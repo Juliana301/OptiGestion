@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ópticas Vitra</title>
+    <title>Óptica Grisol</title>
    <?php IncluirCSS();?>
 </head>
     <body>
@@ -17,26 +17,14 @@
  <section class="container my-5 ">
         <div class="d-flex justify-content-between align-items-center mb-4">
        <h2>Inventario de Productos</h2>
-       <a href="registrarProducto.php" class="btn btn-primary">Agregar Producto</a>
+       <a href="registrarProducto.php" class="btn btn-custom">Agregar Producto</a>
 </div>
 
 <!--filtro-->
 <div class="d-flex justify-content-center">
-<form class="row g-3 align-items-end mb-4">
-    
-<div class="col-md-6">
+  <form class="mb-4 text-center">
   <label for="cedulaInput" class="form-label">Filtrar por código</label>
    <input type="text" id="codigoInput" class="form-control" placeholder="5555">   
-</div>
-
-    <div class="col-md-6">
-        <label for="sucursalSelect" class="form-label">Sucursales</label>
-        <select id="sucursalSelect" class="form-select">
-        <option value="">Todas las Sucursales</option>
-        <option value="Sucursal 1">Sucursal 1</option>
-        <option value="Sucursal 2">Sucursal 2</option>
-        <option value="Sucursal 3">Sucursal 3</option>
-        </select>
 </div>
 </form>
 </div>
@@ -57,7 +45,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                        <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                        <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                         <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                      </div>
                 </div>
@@ -79,7 +67,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                       <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                         </div>
                     </div>
@@ -101,7 +89,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                       <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                         </div>
                     </div>
@@ -123,7 +111,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                       <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                         </div>
                     </div>
@@ -145,7 +133,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                       <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                         </div>
                     </div>
@@ -167,7 +155,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                       <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                         </div>
                     </div>
@@ -187,7 +175,7 @@
 </div>
 </div>
 <div class="d-flex justify-content-end my-2">
-                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-sm me-2">Editar</a>
+                      <a href="editarProducto.php?id=2" class="btn btn-editar btn-custom me-2">Editar</a>
                       <button class="btn btn-eliminar btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">Eliminar</button>
                 </div>
             </div>

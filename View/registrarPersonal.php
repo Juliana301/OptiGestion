@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ópticas Vitra</title>
+    <title>Óptica Grisol</title>
    <?php IncluirCSS();?>
 </head>
     <body>
@@ -87,7 +87,7 @@
 
                                         
                                             <div class="col-md-12 text-center my-4">
-                                                <button type="submit" class="btn btn-outline-light bg-primary" id="btnRegistrarPersonal" name="btnRegistrarPersonal">Registrar</button>
+                                                <button type="submit" class="btn btn-custom" id="btnRegistrarPersonal" name="btnRegistrarPersonal">Registrar</button>
                                             </div>
                                         </div>
                                     </form>

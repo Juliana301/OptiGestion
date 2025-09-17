@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ópticas Vitra</title>
+    <title>Óptica Grisol</title>
    <?php IncluirCSS();?>
 </head>
     <body class="d-flex flex-column min-vh-100">
@@ -48,7 +48,7 @@
                         <td>Lentes recetados</td>
                         <td>Dr. Rodríguez</td>
                         <td>
-                            <a href="editarCita.php?id=2" class="btn btn-sm btn-outline-primary">
+                            <a href="editarCita.php?id=2" class="btn btn-custom btn-outline-primary">
                                 <i class="bi bi-pencil-square"></i> Pendiente
                             </a>
                         </td>
@@ -76,7 +76,7 @@
     <td>Lentes recetados</td>
     <td>Dr. Rodríguez</td>
     <td>
-        <a href="editarCita.php?id=2" class="btn btn-sm btn-outline-primary">
+        <a href="editarCita.php?id=2" class="btn btn-custom btn-outline-primary">
             <i class="bi bi-pencil-square"></i> Pendiente
         </a>
     </td>
@@ -112,7 +112,7 @@
     <td>Lentes recetados</td>
     <td>Dr. Rodríguez</td>
     <td>
-        <a href="editarCita.php?id=3" class="btn btn-sm btn-outline-primary">
+        <a href="editarCita.php?id=3" class="btn btn-custom btn-outline-primary">
             <i class="bi bi-pencil-square"></i> Pendiente
         </a>
     </td>

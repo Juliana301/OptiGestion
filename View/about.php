@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ópticas Vitra</title>
+    <title>Óptica Grisol</title>
    <?php IncluirCSS();?>
 </head>
     <body>
@@ -22,7 +22,7 @@
                             <div class="header-content">
                                 <h1 class="fw-bolder mb-3">Cuidamos su visión, realzamos su estilo</p>
                                <!-- <a class="btn btn-primary btn-lg" href="#scroll-target">Read our story</a>-->
-                                 <p class="lead fw-normal mb-4">En Ópticas Vitra combinamos tecnología, salud visual y 
+                                 <p class="lead fw-normal mb-4">En Óptica Grisol combinamos tecnología, salud visual y 
                                 asesoría personalizada para brindarte una experiencia única.</p>
                             </div>
                         </div>
@@ -33,7 +33,8 @@
             <section class="py-5 bg-light" id="scroll-target">
                 <div class="container px-5 my-5">
                     <div class="row gx-5 align-items-center">
-                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="img/AboutUS.jpg" alt="..." /></div>
+
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="/OptiGestion/assets/img/AboutUS.jpg" alt="..." /></div>
                         <div class="col-lg-6">
                             <h2 class="fw-bolder">Crecimiento e innivación</h2>
                             <p class="lead fw-normal text-muted mb-0">Gracias a la confianza de nuestros clientes y al compromiso de nuestro equipo,
@@ -46,10 +47,10 @@
             <section class="py-5">
                 <div class="container px-5 my-5">
                     <div class="row gx-5 align-items-center">
-                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="img/AboutUS3.jpg" alt="..." /></div>
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="/OptiGestion/assets/img/AboutUS3.jpg" alt="..." /></div>
                         <div class="col-lg-6">
                             <h2 class="fw-bolder">Nuestros productos</h2>
-                            <p class="lead fw-normal text-muted mb-0">En Ópticas Vitra ofrecemos lentes y servicios de alta calidad. Nos enfocamos en mejorar su visión y confianza. </p>
+                            <p class="lead fw-normal text-muted mb-0">En Óptica Grisol ofrecemos lentes y servicios de alta calidad. Nos enfocamos en mejorar su visión y confianza. </p>
                         </div>
                     </div>
                 </div>

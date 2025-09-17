@@ -11,6 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+   --bs-blue-dark: #1F4C52;
   --bs-blue: #6690cf;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -42,6 +43,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+   --bs-blue-dark-rgb: 31, 76, 82; 
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -79,23 +81,255 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+.navbar.bg-blue-dark {
+  background-color: rgb(var(--bs-blue-dark-rgb)) !important;
+}
+/* Ajustar enlaces dentro de navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+.bg-blue-dark {
+  background-color: #1F4C52 !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+/* Dropdown items con hover del mismo color que el navbar */
+.navbar-dark .dropdown-menu {
+    background-color: #7fb3b9; /
+}
+
+.navbar-dark .dropdown-item {
+    color: #fff; /* texto blanco */
+}
+
+.navbar-dark .dropdown-item:hover,
+.navbar-dark .dropdown-item:focus 
+.navbar-dark .dropdown-item:active,
+.navbar-dark .dropdown-item.active {
+    background-color: #2e5b61; 
+    color: #fff;
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-.bg-blue-light {
-    background-color: #6b9cd1;
-}
-.custom-navbar {
-border-bottom: 2px solid rgba(107, 136, 223, 0.3);
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
         }
 
-.custom-navbar .nav-link,
-.custom-navbar .navbar-brand {
-color: white !important;
- }
+        .navbar {
+            background-color: #184f8a;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+       /* =======================
+   Carrito de Compra
+======================= */
+.cart {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+
+.cart-headers {
+    display: flex;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    gap: 10px;
+}
+
+.cart-col-nombre {
+    flex: 3;
+}
+
+.cart-col-cantidad {
+    flex: 1;
+    text-align: center;
+}
+
+.cart-col-descuento {
+    flex: 1;
+    text-align: center;
+}
+
+.cart-col-eliminar {
+    flex: 0.5;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 10px;
+}
+
+/* =======================
+   Calculadora
+======================= */
+#calculator {
+    display: none;
+    width: 200px;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+
+#calc-display {
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+
+/* Botones de calculadora */
+.calc-btn {
+    flex: 1;
+    margin: 0;
+}
+
+/* Flex para las filas de botones */
+.calc-btn-row {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* =======================
+   Productos
+======================= */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Botones */
+.btn.btn-custom {
+    background-color: #1F4C52 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.btn.btn-custom:hover {
+    background-color: #1F4C52 !important;
+    color: #fff !important;
+}
+/* Botón Finalizar Venta */
+.btn-primary-custom.w-100 {
+    background-color: #1F4C52; 
+    color: #fff;
+    border: none;
+}
+
+.btn-primary-custom.w-100:hover {
+    background-color: #1F4C52;
+    color: #fff;
+}
+.btn-eliminar {
+    background-color: #a15858 !important; 
+    color: #fff !important;
+}
+
+.btn-eliminar:hover {
+    background-color: #612a2a; 
+    color: #fff !important;
+}
+
+.badge-pendiente {
+    background-color: #FF6600;
+    color: #fff; 
+}
+.badge-anulada{
+    background-color: #a15858;
+    color: #fff; 
+}
+.badge-pagada{
+    background-color: #1F4C52;
+    color: #fff; 
+}
+/* =======================
+   Carrito de Compra Inputs
+======================= */
+.cart input[type="number"] {
+    width: 50px; /* Para cantidad */
+    text-align: center;
+}
+
+.cart input.descuento {
+    width: 60px; /* Para descuento */
+    text-align: center;
+}
+
+/* =======================
+   Badges
+======================= */
+.badge.bg-success {
+    background-color: #198754 !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+/* =======================
+   Ajustes generales
+======================= */
+.text-center {
+    text-align: center !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.rounded {
+    border-radius: 0.5rem !important;
+}
+
+
 
  .bg-white-gray {
     background-color: #f1f1f1;
@@ -153,13 +387,15 @@ color: white !important;
     z-index: 2;
     padding: 3rem 1.5rem;
     text-align: center;
-    background-color: rgba(141, 153, 224, 0.15); /* opcional */
+    background-color: rgba(54, 71, 167, 0.15); /* opcional */
     border-radius: 1rem;
     backdrop-filter: blur(4px); /* efecto de desenfoque */
 }
 .bg-white{
   background-color: rgb(212, 212, 214);
 }
+
+
 
 .contact-section{
   background-image: url('../img/contacto.jpg');
@@ -265,19 +501,8 @@ color: white !important;
   color:#fff !important;
   border:none !important;
 }
-.btn-eliminar{
-  background-color: #c49981 !important;
-  color:#fff !important;
-  border:none !important;
-}
-.btn-editar:hover{
-  background-color: #e4ded7 !important;
-  
-}
-.btn-eliminar:hover{
-  background-color: #e4ded7 !important;
-  
-}
+
+
 .filtro-personal{
   display: flex;
   flex-wrap: wrap;
@@ -3271,19 +3496,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-success {
-  --bs-btn-color: #198754;
-  --bs-btn-border-color: #198754;
+  --bs-btn-color: #1F4C52;
+  --bs-btn-border-color: #1F4C52;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #198754;
-  --bs-btn-hover-border-color: #198754;
+  --bs-btn-hover-bg: #1F4C52;
+  --bs-btn-hover-border-color: #1F4C52;
   --bs-btn-focus-shadow-rgb: 25, 135, 84;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #198754;
-  --bs-btn-active-border-color: #198754;
+  --bs-btn-active-bg: #1F4C52;
+  --bs-btn-active-border-color: #1F4C52;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #198754;
+  --bs-btn-disabled-color: #1F4C52;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #198754;
+  --bs-btn-disabled-border-color: #1F4C52;
   --bs-gradient: none;
 }
 
@@ -8468,6 +8693,7 @@ body, .navbar, .navbar-brand, .nav-link {
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
 }
+
 
 .user-select-all {
   -webkit-user-select: all !important;
