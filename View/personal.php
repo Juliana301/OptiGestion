@@ -20,7 +20,7 @@
 <main class="container py-5">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h2 class="text-center mb-4">Datos de Personal</h2>
-     <a href="registrarPersonal.php" class="btn btn-custom ">Agregar Personal</a>
+     <a href="registrarPersonal.php" class="btn btn-custom "><i class="bi bi-plus-circle"></i>Agregar Personal</a>
 </div>
 
 <div class="d-flex justify-content-center">

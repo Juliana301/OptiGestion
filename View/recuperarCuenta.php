@@ -28,12 +28,12 @@
                                                     placeholder="" required>
                                             </div>
                                             <div class="text-center mb-3"> 
-                                                <p>¿No tienes cuenta? <a href="RegistrarUsuario.php">Registrarse</a></p>
+                                                <p>¿No tienes cuenta? <a class="link-azul" href="RegistrarUsuario.php">Registrarse</a></p>
                                                 </div>
                                             
 
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-outline-light bg-primary" id="btnRecuperar" name="btnRecuperar">Recuperar</button>
+                                                <button type="submit" class="btn btn-custom" id="btnRecuperar" name="btnRecuperar">Recuperar</button>
                                             </div>
                                        
                                     </form>

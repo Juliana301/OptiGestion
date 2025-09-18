@@ -22,16 +22,16 @@
 
    
     <div class="row">
-        <!-- Filtro de productos -->
+      
     <div class="mb-4">
         <input type="text" id="search-product" class="form-control" placeholder="Buscar producto...">
     </div>
 
     <div class="row">
-        <!-- Productos -->
+       
         <div class="col-lg-7">
             <div class="row" id="productos-container">
-                <!-- Productos cargados aquí -->
+             
             </div>
         </div>
 
@@ -72,12 +72,12 @@
             </table>
         </div>
        <button class="btn btn-primary-custom w-100 mt-3" id="checkout-btn">Finalizar Venta</button>
-        <!-- Botón calculadora -->
+       
         <button id="toggle-calculator" class="btn btn-secondary mt-3 w-100">
             <i class="bi bi-calculator"></i> Calculadora
         </button>
 
-        <!-- Calculadora desplegable -->
+        <!-- Calculadora -->
         <div id="calculator" class="calculator bg-light p-3 rounded shadow mt-2" style="display:none;">
             <input type="text" id="calc-display" class="form-control mb-2 text-end" readonly>
             <div class="d-grid gap-1">
@@ -221,7 +221,7 @@ buttons.forEach(btn => {
     });
 });
 
-// Inicializar productos al cargar
+
 renderProductos();
 </script>
 

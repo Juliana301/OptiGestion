@@ -54,7 +54,7 @@ function MostrarMenu() {
 // Función para mostrar el footer
 function MostrarFooter() {
     echo '
-    <footer class="footer bg-dark text-light pt-5 pb-3 mt-auto">
+    <footer class="footer bg-dark text-light pt-5 pb-3 ">
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-3 mb-4">
@@ -101,7 +101,7 @@ function MostrarFooter() {
     </footer>';
 }
 
-// Función para incluir CSS con rutas absolutas
+// Función para incluir CSS
 function IncluirCSS() {
     echo '
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -118,12 +118,12 @@ function IncluirCSS() {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/OptiGestion/assets/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="/OptiGestion/assets/css/styles.css?v=1.3">
+    <link rel="stylesheet" href="/OptiGestion/assets/css/styles.css?v=1.5">
     
     ';
 }
 
-// Función para incluir JS con rutas absolutas
+// Función para incluir JS 
 function IncluirScripts() {
     echo '
     <script src="/OptiGestion/assets/js/jquery.min.js"></script>

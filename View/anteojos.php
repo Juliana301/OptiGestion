@@ -23,11 +23,11 @@
                         <p class="lead fw-normal text-muted mb-0">Le ofrecemos una gran variedad de productos de alta calidad.</p>
                     </div>
                     <div class="row gx-5 justify-content-center">
-                        <!-- producto-->
+                       
                         <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
+                            <div class="card mb-5 mb-l-0">
                                 <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
-                                <div class="card-body p-5">
+                                <div class="card-body p-2">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
                                         <span class="display-4 ">₡0</span>
@@ -36,11 +36,11 @@
                                 </div>
                             </div>
                         </div>
-                          <!-- producto-->
+                         
                         <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
+                            <div class="card mb-5 mb-l-0">
                                 <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
-                                <div class="card-body p-5">
+                                <div class="card-body p-2">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
                                         <span class="display-4 ">₡0</span>
@@ -49,11 +49,11 @@
                                 </div>
                             </div>
                         </div>
-                          <!-- producto-->
+                          
                         <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
+                            <div class="card mb-5 mb-l-0">
                                 <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
-                                <div class="card-body p-5">
+                                <div class="card-body p-2">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
                                         <span class="display-4 ">₡0</span>
@@ -62,11 +62,11 @@
                                 </div>
                             </div>
                         </div>
-                           <!-- producto-->
+                          
                         <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
+                            <div class="card mb-5 mb-l-0">
                                 <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
-                                <div class="card-body p-5">
+                                <div class="card-body p-2">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
                                         <span class="display-4 ">₡0</span>
@@ -75,11 +75,11 @@
                                 </div>
                             </div>
                         </div>
-                           <!-- producto-->
+                          
                         <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
+                            <div class="card mb-5 mb-l-0">
                                 <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
-                                <div class="card-body p-5">
+                                <div class="card-body p-2">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
                                         <span class="display-4 ">₡0</span>
@@ -88,11 +88,11 @@
                                 </div>
                             </div>
                         </div>
-                           <!-- producto-->
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
+                          
+                       <div class="col-lg-6 col-xl-4">
+                            <div class="card mb-5 mb-l-0">
                                 <img src="/OptiGestion/assets/img/ejemplo.jpg" class="card-img-top" alt="Imagen del producto">
-                                <div class="card-body p-5">
+                                <div class="card-body p-2">
                                     <h5 class="card-title fw-bold text-center">Producto</h5>
                                     <div class="mb-3 text-center">
                                         <span class="display-4 ">₡0</span>

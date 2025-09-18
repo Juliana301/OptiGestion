@@ -391,8 +391,9 @@ body {
   background-color: rgb(212, 212, 214);
 }
 
-
-
+.btn-space {
+   margin-bottom: 50px !important;
+}
 .contact-section{
   background-image: url('../img/contacto.jpg');
    background-size: cover;
@@ -408,15 +409,23 @@ body {
     align-items: center;
 }
 .registrer-section{
- background-image: url('../img/fondoRegistro.jpg');
+ background-image: url('../img/prueba1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     color: white;
 }
+.link-azul {
+  color: #003366;
+  text-decoration: none; 
+}
+
+.link-azul:hover {
+  color: #001f4d;
+}
 .form-container{
-  background: rgba(134, 143, 156, 0.6);
+  background: rgba(161, 185, 219, 0.6);
   padding:30;
   border-radius:15px;
   box-shadow:0 4px 10px rgba(0, 0, 0, 0.05);
@@ -11361,11 +11370,11 @@ html, body {
 }
 
 main {
-    flex: 1; /* Esto empuja el footer hacia abajo */
+    flex: 5; 
 }
 
 .footer {
-    background-color: #f8f9fa; /* Color claro */
+    background-color: #f8f9fa; 
     padding: 1rem 0;
     text-align: center;
 }

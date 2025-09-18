@@ -17,10 +17,10 @@
  <section class="container my-5 ">
         <div class="d-flex justify-content-between align-items-center mb-4">
        <h2>Inventario de Productos</h2>
-       <a href="registrarProducto.php" class="btn btn-custom">Agregar Producto</a>
+       <a href="agregarProducto.php" class="btn btn-custom"><i class="bi bi-plus-circle"></i>Agregar Producto</a>
 </div>
 
-<!--filtro-->
+
 <div class="d-flex justify-content-center">
   <form class="mb-4 text-center">
   <label for="cedulaInput" class="form-label">Filtrar por código</label>
@@ -185,7 +185,7 @@
     <?php MostrarFooter(); ?>
     <?php IncluirScripts(); ?>
 
-    <!-- Modal confirmación eliminar -->
+    
 <div class="modal fade" id="confirmarEliminarModal" tabindex="-1" aria-labelledby="confirmarEliminarLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

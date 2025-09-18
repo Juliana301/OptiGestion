@@ -17,34 +17,49 @@ include('layout.php');
 <body>
   <?php MostrarMenu(); ?>
 
-  <section class="appointment section">
-    <div class="container section-title text-center my-5" data-aos="fade-up">
-      <h2>Editar Productos</h2>
-    </div>
+  <section class="full-height-section">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <form action="forms/editarProductoS.php" method="post" role="form" class="php-email-form mx-auto" style="max-width: 500px;">
-        
-        <!-- Campo Nombre -->
-        <div class="mb-4 text-center">
-          <label for="nombre" class="form-label fw-bold">Nombre del Producto</label>
-          <input type="text" name="nombre" id="nombre" class="form-control text-center" placeholder="Lentes de Sol" required>
+          
+          <h4 class="text-center mb-3">Editar Producto</h4>
+          <p class="text-center mb-5">Actualice los datos del producto según sea necesario</p>
+
+          
+          <form action="forms/editarProductoS.php" method="post" role="form" class="php-email-form">
+
+            
+            <div class="row justify-content-center">
+            <div class="col-md-6"> 
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de Producto" required>
+              </div>
+            </div>
+          </div>
+
+            <div class="row justify-content-center">
+            <div class="col-md-6"> 
+              <div class="mb-3">
+              <label for="stock" class="form-label">Stock</label>
+              <input type="number" name="stock" id="stock" class="form-control" placeholder="Cantidad disponible" required>
+            </div>
+            </div>
+          </div>
+
+
+            
+            <div class="text-center mt-4">
+              <button class="btn btn-custom px-4" type="submit">
+                 Editar
+              </button>
+            </div>
+
+          </form>
+
         </div>
-
-        <!-- Campo Stock -->
-        <div class="mb-4 text-center">
-          <label for="stock" class="form-label fw-bold">Stock</label>
-          <input type="number" name="stock" id="stock" class="form-control text-center" placeholder="Cantidad disponible" required>
-        </div>
-
-        <!-- Botón Guardar -->
-        <div class="text-center my-4">
-          <button type="submit" class="btn btn-primary px-4">
-            <i class="bi bi-pencil-square"></i> Guardar Cambios
-          </button>
-        </div>
-
-      </form>
+      </div>
     </div>
   </section>
 

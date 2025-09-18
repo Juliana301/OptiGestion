@@ -77,12 +77,12 @@
 
                                             <div class="col-md-12 mb-3 text-center">
                                                 <div class="form-group">
-                                                    <p>¿Ya tienes cuenta? <a href="iniciarSesion.php">Iniciar sesión</a></p>
+                                                    <p>¿Ya tienes cuenta? <a class="link-azul" href="iniciarSesion.php">Iniciar sesión</a></p>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-12 text-center my-4">
-                                                <button type="submit" class="btn btn-outline-light bg-primary" id="btnRegistrarUsuario" name="btnRegistrarUsuario">Registrarse</button>
+                                            <div class="col-md-12 text-center my-3">
+                                                <button type="submit" class="btn btn-custom" id="btnRegistrarUsuario" name="btnRegistrarUsuario">Registrarse</button>
                                             </div>
                                         </div>
                                     </form>

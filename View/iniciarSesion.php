@@ -35,13 +35,13 @@
 
                                            <div class="text-center mb-3"> 
                                                 <div class="form-group">
-                                                    <a class="text" href="recuperarCuenta.php">Recuperar acceso</a>
+                                                    <a class="text link-azul" href="recuperarCuenta.php">Recuperar acceso</a>
                                                 </div>
                                             </div>
 
                                             <div class="text-center mb-3"> 
                                                 <div class="form-group">
-                                                    <p>¿No tienes cuenta? <a href="RegistrarUsuario.php">Registrarse</a></p>
+                                                    <p>¿No tienes cuenta? <a class="link-azul" href="RegistrarUsuario.php">Registrarse</a></p>
                                                 </div>
                                             </div>
 
