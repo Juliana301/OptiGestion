@@ -1,6 +1,6 @@
 <?php 
     include_once 'layout.php';
-    
+    include_once __DIR__ . '/../Controller/usuarioController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +17,28 @@
     
     <section class=" d-flex align-items-center justify-content-center min-vh-100">
         <div class="container ">
+               <?php
+            
+            if(isset($_SESSION["txtMensaje"]))
+            {
+                if(isset($_SESSION["registroExitoso"]) && $_SESSION["registroExitoso"] == true)
+                {
+                    echo '<div class="alert alert-success">' . $_SESSION["txtMensaje"] . '</div>';
+                    echo '<script>
+                            setTimeout(function(){
+                                window.location.href = "iniciarSesion.php";
+                            }, 3000);
+                        </script>';
+                    unset($_SESSION["txtMensaje"]);
+                    unset($_SESSION["registroExitoso"]);
+                }
+                else
+                {
+                    echo '<div class="alert alert-danger">' . $_SESSION["txtMensaje"] . '</div>';
+                    unset($_SESSION["txtMensaje"]);
+                }
+            }
+        ?>
         <div class="section-title text-center my-2" data-aos="fade-up">
          
                  <h4 class="mb-4 text-center">Ingrese sus Datos</h4>
@@ -39,11 +61,15 @@
                                             </div>
 
                                             <div class="col-md-6 mb-3 my-4">
-                                                <label for="name" class="form-label">Apellidos</label>
+                                                <label for="name" class="form-label">Primer Apellido</label>
                                                 <input type="name" class="form-control" name="name" id="name"
                                                     placeholder="" required>
                                             </div>
-
+                                            <div class="col-md-6 mb-3 my-4">
+                                                <label for="name" class="form-label">Segundo Apellido</label>
+                                                <input type="name" class="form-control" name="name" id="name"
+                                                    placeholder="" required>
+                                            </div>
 
                                             <div class="col-md-6 mb-3 my-4">
                                                 <label for="Email" class="form-label">Correo Electrónico</label>

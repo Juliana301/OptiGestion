@@ -1,57 +1,102 @@
 <?php
+if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
-// Función para mostrar el menú de navegación
 function MostrarMenu() {
+   
+
+    $rol = $_SESSION['RolID'] ?? null;       
+    $EmpleadoRol = $_SESSION['EmpleadoRol'] ?? null;
+
     echo '
-   <nav class="navbar navbar-expand-lg navbar-dark bg-blue-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue-dark">
         <div class="container px-5">
-            <a class="navbar-brand" href="index.php">Óptica Grisol</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/OptiGestion/index.php">Óptica Grisol</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="/OptiGestion/index.php">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="/OptiGestion/view/about.php">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/OptiGestion/view/anteojos.php">Anteojos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/OptiGestion/view/iniciarSesion.php">Iniciar Sesión</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/OptiGestion/view/personal.php">Personal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/OptiGestion/view/anteojos.php">Anteojos</a></li>';
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownCitas" href="#" role="button" 
-                            data-bs-toggle="dropdown" aria-expanded="false">Citas</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownCitas">
-                            <li><a class="dropdown-item" href="/OptiGestion/view/appointmentForm.php">Agendar Cita</a></li>
-                            <li><a class="dropdown-item" href="/OptiGestion/view/historialMedico.php">Historial Médico</a></li>
-                        </ul>
-                    </li>
+    // controla el usuario no logueado
+    if (!$rol) {
+        echo '<li class="nav-item"><a class="nav-link" href="/OptiGestion/view/iniciarSesion.php">Iniciar Sesión</a></li>';
+    }
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownAdmin" href="#" role="button" 
-                            data-bs-toggle="dropdown" aria-expanded="false">Administración</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAdmin">
-                            <li><a class="dropdown-item" href="/OptiGestion/view/reportes.php">Reportes</a></li>
-                            <li><a class="dropdown-item" href="/OptiGestion/view/inventario.php">Inventario</a></li>
-                            <li><a class="dropdown-item" href="/OptiGestion/view/facturacion.php">Facturación</a></li>
-                        </ul>
-                    </li>
+    // este es para el de paciente
+    else if ($rol === 'Paciente') {
+        echo '
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCitas" role="button" data-bs-toggle="dropdown">
+                Citas
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownCitas">
+                <li><a class="dropdown-item" href="/OptiGestion/view/appointmentForm.php">Agendar Cita</a></li>
+                <li><a class="dropdown-item" href="/OptiGestion/view/historialMedico.php">Historial Médico</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-bs-toggle="dropdown">
+                Perfil
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPerfil">
+                <li><a class="dropdown-item" href="/OptiGestion/view/editarPerfil.php">Editar Perfil</a></li>
+                <li><a class="dropdown-item" href="/OptiGestion/logout.php">Cerrar Sesión</a></li>
+            </ul>
+        </li>';
+    }
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownPerfil" href="#" role="button" 
-                            data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPerfil">
-                            <li><a class="dropdown-item" href="/OptiGestion/view/editarPerfil.php">Editar Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                        </ul>
-                    </li>
+    // este para el de empleado
+    else if ($rol === 'Empleado') {
+        // este es para el empleado con rol de administrador
+        if ($EmpleadoRol == 1) {
+            echo '
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPersonal" role="button" data-bs-toggle="dropdown">
+                    Personal
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPersonal">
+                    <li><a class="dropdown-item" href="/OptiGestion/view/personal.php">Ver Personal</a></li>
+                    <li><a class="dropdown-item" href="/OptiGestion/view/registrarPersonal.php">Registrar Personal</a></li>
+                </ul>
+            </li>';
+        }
+
+        // este para todos los demás empleados
+        echo '
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdmin" role="button" data-bs-toggle="dropdown">
+                Administración
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAdmin">
+                <li><a class="dropdown-item" href="/OptiGestion/view/reportes.php">Reportes</a></li>
+                <li><a class="dropdown-item" href="/OptiGestion/view/inventario.php">Inventario</a></li>
+                <li><a class="dropdown-item" href="/OptiGestion/view/facturacion.php">Facturación</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-bs-toggle="dropdown">
+                Perfil
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPerfil">
+                <li><a class="dropdown-item" href="/OptiGestion/view/editarPerfil.php">Editar Perfil</a></li>
+                <li><a class="dropdown-item" href="?cerrarSesion=1">Cerrar Sesión</a></li>
+            </ul>
+        </li>';
+    }
+
+    echo '
                 </ul>
             </div>
         </div>
     </nav>';
 }
 
-// Función para mostrar el footer
+
 function MostrarFooter() {
     echo '
     <footer class="footer bg-dark text-light pt-5 pb-3 ">
@@ -101,7 +146,7 @@ function MostrarFooter() {
     </footer>';
 }
 
-// Función para incluir CSS
+
 function IncluirCSS() {
     echo '
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -123,7 +168,7 @@ function IncluirCSS() {
     ';
 }
 
-// Función para incluir JS 
+
 function IncluirScripts() {
     echo '
     <script src="/OptiGestion/assets/js/jquery.min.js"></script>

@@ -1,6 +1,10 @@
 <?php 
+if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
     include_once 'layout.php';
-    
+  include_once __DIR__ . '/../Controller/loginController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,21 +22,28 @@
     <section class="registrer-section">
         <div class="container full-height">
        <div class="row justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="100">
-                   <div class="col-auto form-container data-aos fade-up" data-aos-delay="100">  
+        <?php
+                                        if(isset($_SESSION["txtMensaje"])){
+                                        echo '<div class="alert alert-danger">' . $_SESSION["txtMensaje"] . '</div>';
+                                        unset($_SESSION['txtMensaje']);           
+                            }
+                                    ?>           
+       <div class="col-auto form-container data-aos fade-up" data-aos-delay="100">  
                    <h4 class="mb-4 text-center my-2">Iniciar Sesión</h4>
+                       
                    <form method="POST" id="contactForm" name="contactForm" class="contactForm aling-items-center">
                      <div class="text-center mb-3">           
-                            <label for="Email" class="form-label">Correo Electrónico</label>
-                                                <input type="email" class="form-control" name="Email" id="Email"
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                                                <input type="email" class="form-control" name="email" id="email"
                                                     placeholder="" required>
                                             </div>
 
                                             <div class="text-center mb-3"> 
-                                                <label for="Password" class="form-label">Contraseña</label>
-                                                <input type="password" class="form-control" name="Password"
-                                                    id="Password" placeholder="" required>
+                                                <label for="password" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" name="password"
+                                                    id="password" placeholder="" required>
                                             </div>
-
+                                            
                                            <div class="text-center mb-3"> 
                                                 <div class="form-group">
                                                     <a class="text link-azul" href="recuperarCuenta.php">Recuperar acceso</a>
@@ -46,7 +57,7 @@
                                             </div>
 
                                             <div class="text-center my-2">
-                                                <button type="submit" class="btn btn-custom" id="btnRegistrarUsuario" name="btnRegistrarUsuario">Iniciar Sesión</button>
+                                                <button type="submit" class="btn btn-custom" id="btnIniciarSesion" name="btnIniciarSesion">Iniciar Sesión</button>
                                             </div>
                                         </div>
                                     </form>

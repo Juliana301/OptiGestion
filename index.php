@@ -1,5 +1,6 @@
 <?php
  include('view/layout.php');
+ 
 ?>
 
 <!DOCTYPE html>

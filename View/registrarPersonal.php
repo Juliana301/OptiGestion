@@ -1,6 +1,6 @@
 <?php 
     include_once 'layout.php';
-    
+    include_once __DIR__ . '/../Controller/usuarioController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,11 +38,15 @@
                                             </div>
 
                                             <div class="col-md-6 mb-3 my-4">
-                                                <label for="name" class="form-label">Apellidos</label>
+                                                <label for="name" class="form-label">Primer Apellido</label>
                                                 <input type="name" class="form-control" name="name" id="name"
                                                     placeholder="" required>
                                             </div>
-
+<div class="col-md-6 mb-3 my-4">
+                                                <label for="name" class="form-label">Segundo Apellido</label>
+                                                <input type="name" class="form-control" name="name" id="name"
+                                                    placeholder="" required>
+                                            </div>
                                             <div class="col-md-6 mb-3 my-4">
                                                 <label for="Email" class="form-label">Correo Electrónico</label>
                                                 <input type="email" class="form-control" name="Email" id="Email"
@@ -66,16 +70,7 @@
                                                 <input type="tel" class="form-control" name="Phone" id="Phone"
                                                     placeholder="" required>
                                             </div>
-                                            <div class="col-md-6 form-group mb-3">
-                                                            <label for="date" class="form-label">Seleccione la sucursal</label>
-                                                        <select name="department" id="department" class="form-select" required="">
-                                                            <option value="">Seleccionar</option>
-                                                            <option value="Department 1">Sucursal 1</option>
-                                                            <option value="Department 2">Sucursal 2</option>
-                                                            <option value="Department 3">Sucursal 3</option>
-                                                        </select>
-                                                        </div>
-                                                        <div class="col-md-4 form-group mt-3">
+                                          <div class="col-md-4 form-group mt-3">
                                                             <label for="date" class="form-label">Seleccione el rol</label>
                                                         <select name="department" id="department" class="form-select" required="">
                                                             <option value="">Seleccionar</option>
@@ -87,7 +82,7 @@
 
                                         
                                             <div class="col-md-12 text-center my-4">
-                                                <button type="submit" class="btn btn-custom" id="btnRegistrarPersonal" name="btnRegistrarPersonal">Registrar</button>
+                                                <button type="submit" class="btn btn-custom" id="RegistrarPersonal" name="RegistrarPersonal">Registrar</button>
                                             </div>
                                         </div>
                                     </form>
