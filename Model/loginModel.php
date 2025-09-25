@@ -1,36 +1,97 @@
 <?php
+include_once __DIR__ . '/../Model/baseDatos.php';
 
-   include_once __DIR__ . '/../Model/baseDatos.php';
-
-    //Iniciar Sesión
-
-function IniciarSesionModel($correo, $contrasenna)
+// Registrar Personal
+function RegistrarPersonalModel($cedula, $nombre, $apellido, $apellidoDos, $correoElectronico, $contrasenna, $telefono, $direccion, $rolId)
 {
     try {
         $enlace = AbrirBD();
-
-      
-        $sentencia = $enlace->prepare("CALL IniciarSesion(?, ?)");
-
-        if (!$sentencia) {
-            throw new Exception("Error al preparar la consulta: " . $enlace->error);
+        $sentencia = $enlace->prepare("CALL RegistrarPersonal(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        if(!$sentencia) {
+            throw new Exception($enlace->error);
         }
 
-        $sentencia->bind_param("ss", $correo, $contrasenna);
+        // 8 strings y 1 int → "ssssssssi"
+        $sentencia->bind_param("ssssssssi", 
+            $cedula, 
+            $nombre, 
+            $apellido, 
+            $apellidoDos, 
+            $correoElectronico, 
+            $contrasenna,  // ya viene con password_hash() desde el controlador
+            $telefono, 
+            $direccion, 
+            $rolId
+        );
+
+        $sentencia->execute();
+        $sentencia->close();
+        CerrarBD($enlace);
+
+        return ['resultado' => 1, 'mensaje' => 'Registro realizado con éxito'];
+
+    } catch(Exception $ex) {
+        return ['resultado' => 0, 'mensaje' => 'Error en el servidor: '.$ex->getMessage()];
+    }
+}
+
+// Registrar Paciente
+function RegistrarPacienteModel($cedula, $nombre, $apellido, $apellidoDos, $correoElectronico, $contrasenna, $telefono, $direccion, $fechaNacimiento)
+{
+    try {
+        $enlace = AbrirBD();
+        $sentencia = $enlace->prepare("CALL RegistrarPaciente(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        if(!$sentencia) {
+            throw new Exception($enlace->error);
+        }
+
+       
+        $sentencia->bind_param("sssssssss", 
+            $cedula, 
+            $nombre, 
+            $apellido, 
+            $apellidoDos, 
+            $correoElectronico, 
+            $contrasenna,  // ya viene hasheada
+            $telefono, 
+            $direccion, 
+            $fechaNacimiento
+        );
+
+        $sentencia->execute();
+        $sentencia->close();
+        CerrarBD($enlace);
+
+        return ['resultado' => 1, 'mensaje' => 'Registro realizado con éxito'];
+
+    } catch(Exception $ex) {
+        return ['resultado' => 0, 'mensaje' => 'Error en el servidor: '.$ex->getMessage()];
+    }
+}
+
+// Iniciar Sesión
+function IniciarSesionModel($correo)
+{
+    try {
+        $enlace = AbrirBD();
+        $sentencia = $enlace->prepare("CALL IniciarSesion(?)");
+        if(!$sentencia) {
+            throw new Exception($enlace->error);
+        }
+
+        $sentencia->bind_param("s", $correo);
         $sentencia->execute();
 
         $resultado = $sentencia->get_result();
-        $usuario = $resultado->fetch_assoc(); //ese es para d¿que devuelva null si no hay usuario
+        $usuario = $resultado->fetch_assoc();
 
         $sentencia->close();
         CerrarBD($enlace);
 
-        return $usuario; 
+        return $usuario ?: null;
 
     } catch(Exception $ex) {
         return null;
     }
 }
-
-
 ?>

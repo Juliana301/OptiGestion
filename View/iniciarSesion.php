@@ -34,14 +34,11 @@ if(session_status() == PHP_SESSION_NONE) {
                    <form method="POST" id="contactForm" name="contactForm" class="contactForm aling-items-center">
                      <div class="text-center mb-3">           
                             <label for="email" class="form-label">Correo Electrónico</label>
-                                                <input type="email" class="form-control" name="email" id="email"
-                                                    placeholder="" required>
-                                            </div>
+                                               <input type="email" class="form-control" name="CorreoElectronico" id="CorreoElectronico" required>
 
                                             <div class="text-center mb-3"> 
                                                 <label for="password" class="form-label">Contraseña</label>
-                                                <input type="password" class="form-control" name="password"
-                                                    id="password" placeholder="" required>
+                                                <input type="password" class="form-control" name="Contrasenna" id="Contrasenna" required>
                                             </div>
                                             
                                            <div class="text-center mb-3"> 
@@ -52,12 +49,12 @@ if(session_status() == PHP_SESSION_NONE) {
 
                                             <div class="text-center mb-3"> 
                                                 <div class="form-group">
-                                                    <p>¿No tienes cuenta? <a class="link-azul" href="RegistrarUsuario.php">Registrarse</a></p>
+                                                    <p>¿No tienes cuenta? <a class="link-azul" href="RegistrarPaciente.php">Registrarse</a></p>
                                                 </div>
                                             </div>
 
                                             <div class="text-center my-2">
-                                                <button type="submit" class="btn btn-custom" id="btnIniciarSesion" name="btnIniciarSesion">Iniciar Sesión</button>
+                                               <button type="submit" class="btn btn-custom" name="btnIniciarSesion">Iniciar sesión</button>
                                             </div>
                                         </div>
                                     </form>

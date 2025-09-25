@@ -29,6 +29,10 @@ function MostrarMenu() {
 
     // este es para el de paciente
     else if ($rol === 'Paciente') {
+
+        //se pone debajo del primer 
+           // </ul>
+        //</li>
         echo '
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCitas" role="button" data-bs-toggle="dropdown">
@@ -39,6 +43,7 @@ function MostrarMenu() {
                 <li><a class="dropdown-item" href="/OptiGestion/view/historialMedico.php">Historial Médico</a></li>
             </ul>
         </li>
+        
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-bs-toggle="dropdown">
                 Perfil
@@ -54,16 +59,19 @@ function MostrarMenu() {
     else if ($rol === 'Empleado') {
         // este es para el empleado con rol de administrador
         if ($EmpleadoRol == 1) {
-            echo '
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPersonal" role="button" data-bs-toggle="dropdown">
-                    Personal
-                </a>
+            //de aqui(sin el echo y las ') despues de ponerlo arriba se comenta desde el else a la llave
+            // para que les funcione y luego se pone todo como estaba
+              echo ' 
+             <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPersonal" role="button" data-bs-toggle="dropdown">
+                     Personal
+                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPersonal">
                     <li><a class="dropdown-item" href="/OptiGestion/view/personal.php">Ver Personal</a></li>
-                    <li><a class="dropdown-item" href="/OptiGestion/view/registrarPersonal.php">Registrar Personal</a></li>
+                     
                 </ul>
             </li>';
+            //hasta aqui (igual sin ' y ;)
         }
 
         // este para todos los demás empleados
@@ -77,18 +85,20 @@ function MostrarMenu() {
                 <li><a class="dropdown-item" href="/OptiGestion/view/inventario.php">Inventario</a></li>
                 <li><a class="dropdown-item" href="/OptiGestion/view/facturacion.php">Facturación</a></li>
             </ul>
-        </li>
+        </li>';
+    }
+if ($rol) {
+        echo '
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-bs-toggle="dropdown">
                 Perfil
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPerfil">
                 <li><a class="dropdown-item" href="/OptiGestion/view/editarPerfil.php">Editar Perfil</a></li>
-                <li><a class="dropdown-item" href="?cerrarSesion=1">Cerrar Sesión</a></li>
+                <li><a class="dropdown-item" href="/OptiGestion/logout.php">Cerrar Sesión</a></li>
             </ul>
         </li>';
     }
-
     echo '
                 </ul>
             </div>

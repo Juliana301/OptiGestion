@@ -28,7 +28,7 @@
                                                     placeholder="" required>
                                             </div>
                                             <div class="text-center mb-3"> 
-                                                <p>¿No tienes cuenta? <a class="link-azul" href="RegistrarUsuario.php">Registrarse</a></p>
+                                                <p>¿No tienes cuenta? <a class="link-azul" href="RegistrarPaciente.php">Registrarse</a></p>
                                                 </div>
                                             
 
