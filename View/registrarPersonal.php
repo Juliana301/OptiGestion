@@ -25,65 +25,62 @@
                  unset($_SESSION["registroExitoso"]);        
           }
           ?>  
-          <div class="section-title text-center my-2" data-aos="fade-up">
-                  <h4 class="mb-1 text-center">Ingrese los Datos</h4>
-                </div>
-                   <div class="row justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="100">
-                   <div class="col-lg-7 " data-aos="fade-up" data-aos-delay="100">  
-                   <form method="POST" id="contactForm" name="contactForm" class="contactForm align-items-center">
-                   <div class="row">    
-                    <div class="col-md-6 mb-3 my-3">      
+          <div class="register-container" data-aos="fade-up">
+                  <h4 class="text-center mb-1">Ingrese Datos de Personal</h4>
+                   <form method="POST" name="contactForm" class="row g-3" >
+   
+                                         <div class="col-md-6">    
                                         <label for="Cedula" class="form-label">Cédula</label>
                                                 <input type="text" class="form-control" name="Cedula" id="Cedula"
                                                 placeholder="" required>
                                             </div>
 
-                                          <div class="col-md-6 mb-3 my-4">           
+                                          <div class="col-md-6">            
                                            <label for="Nombre" class="form-label">Nombre</label>
                                                 <input type="text" class="form-control" name="Nombre" id="Nombre"
                                                 placeholder="" required>
                                             </div>
 
-                                            <div class="col-md-6 mb-3 my-4">
+                                            <div class="col-md-6"> 
                                                 <label for="Apellido" class="form-label">Primer Apellido</label>
                                                 <input type="text" class="form-control" name="Apellido" id="Apellido"
                                                     placeholder="" required>
                                             </div>
-                                            <div class="col-md-6 mb-3 my-4">
+                                            <div class="col-md-6"> 
                                                 <label for="ApellidoDos" class="form-label">Segundo Apellido</label>
                                                 <input type="text" class="form-control" name="ApellidoDos" id="ApellidoDos"
                                                     placeholder="" required>
                                             </div>
 
-                                            <div class="col-md-6 mb-3 my-4">
+                                            <div class="col-md-6"> 
                                                 <label for="CorreoElectronico" class="form-label">Correo Electrónico</label>
                                                 <input type="email" class="form-control" name="CorreoElectronico" id="CorreoElectronico"
                                                     placeholder="" required>
                                             </div>
 
-                                            <div class="col-md-6 mb-3 my-4">
+                                            <div class="col-md-6"> 
                                                 <label for="Contrasenna" class="form-label">Contraseña</label>
                                                 <input type="password" class="form-control" name="Contrasenna"
                                                     id="Contrasenna" placeholder="" required>
                                             </div>
 
-                                           <div class="col-md-6 mb-3">
+                                           <div class="col-md-6"> 
                                                 <label for="ConfirmarContrasenna" class="form-label">Confirmar Contraseña</label>
                                                 <input type="password" class="form-control" name="ConfirmarContrasenna"
                                                     id="ConfirmarContrasenna" placeholder="" required>
                                             </div>
 
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-6"> 
                                                 <label for="Telefono" class="form-label">Teléfono</label>
                                                 <input type="text" class="form-control" name="Telefono" id="Telefono"
                                                     placeholder="" required>
                                             </div>
-                                            <div class="col-md-12 mb-3">
+                                           <div class="col-md-12">
                                                 <label for="Direccion" class="form-label">Dirección</label>
                                                 <input type="text" class="form-control" name="Direccion" id="Direccion"
                                                     placeholder="">
                                             </div>
-                                          <div class="col-md-4 form-group mt-3">
+                                          <div class="col-md-12">
                                                             <label for="RolId" class="form-label">Seleccione el rol</label>
                                                         <select name="RolId" id="RolId" class="form-select" required="">
                                                             <option value="">Seleccionar</option>
@@ -95,7 +92,7 @@
                                                         </div>
 
                                         
-                                            <div class="col-md-12 text-center my-4">
+                                            <div class="col-md-12 text-center ">
                                                 <button type="submit" class="btn btn-custom" id="btnRegistrarPersonal" name="btnRegistrarPersonal">Registrar</button>
                                             </div>
                                         </div>

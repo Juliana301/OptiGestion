@@ -213,7 +213,50 @@ body {
     flex-direction: column;
 }
 
+.register-container {
+  max-width: 650px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+.register-container h4 {
+  font-weight: bold;
+}
+.btn-custom {
+  background: #1F4C52;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  transition: 0.3s;
+}
+.btn-custom:hover {
+  background: #1F4C52 !important;
+ }
 
+ .profile-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+ }
+
+ .profile-header{
+  background: #C1412F;
+  padding: 1rem 1.5rem;
+  border-radius: 12px 12px 0 0;
+  color:#000;
+  font-weight: bold;
+  text-align: center;
+ }
+
+ .profile-section-title{
+  font-weight: 700;
+  color: #1F4C52;
+  margin-bottom: 0.5rem;
+ }
 /*Botones */
 .btn.btn-custom {
     background-color: #1F4C52 !important;

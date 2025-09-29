@@ -1,7 +1,11 @@
 
 <?php
- include('layout.php')
- 
+ include('layout.php');
+ include_once __DIR__ . '/../Model/personalModel.php';
+
+ $cedulaFiltro = $_GET['cedula'] ?? null;
+
+ $listaPersonal =ObtenerPersonal($cedulaFiltro);
 ?>
 
 <!DOCTYPE html>
@@ -19,99 +23,60 @@
 
 <main class="container py-5">
   <div class="d-flex justify-content-between align-items-center mb-3">
-    <h2 class="text-center mb-4">Datos de Personal</h2>
-     <a href="registrarPersonal.php" class="btn btn-custom "><i class="bi bi-plus-circle"></i>Agregar Personal</a>
+    <h2 class="text-center mb-4">Datos de personal</h2>
+     <a href="registrarpersonal.php" class="btn btn-custom "><i class="bi bi-plus-circle"></i>Agregar personall</a>
 </div>
 
-<div class="d-flex justify-content-center">
-  <form class="mb-4 text-center">
-    <label for="cedulaInput" class="form-label">Filtrar por cédula</label>
-    <input type="text" id="cedulaInput" class="form-control" placeholder="25259592">
+<div class="mb-4 d-flex justify-content-center">
+  <form class="filter-form text-center d-flexflex-wrap gap-2" method="GET">
+    <input type="text" name="cedula" class="form-control" placeholder="Filtrar por cédula">
+    <button type="submit" class="mb-2 my-2 btn btn-custom">Buscar</button>
+   <a href="personal.php" class="mb-2 my-2 btn btn-outline-secondary">Limpiar</a>
   </form>
 </div>
 
+      <div class="card card-custom p-3">
       <div class="table-responsive">
-  <table class="table align-middle">
-    <thead>
+  <table class="table table-hover align-middle">
+    <thead class="table-light">
       <tr>
        <th>Cédula</th>
        <th>Nombre</th>
-       <th>Número de Teléfono</th>
        <th>Correo Electrónico</th>
+       <th>Número de Teléfono</th>
+       <th>Dirección</th>
        <th>Rol</th>
-       <th>Sucursal</th>
        <th>Estado</th>
       </tr>
     </thead>
     <tbody>
+        <?php foreach ($listaPersonal as $personal): ?>
      <tr>
-        <td>62525251</td>
-        <td>Chase Gonzalez Bolaños</td>
-        <td>888888</td>
-        <td>c@gmail.com</td>
-        <td>Administrador de inventario</td>
-        <td>Sucursal 1</td>
+        <td><?php echo $personal['Cedula']; ?></td>
+        <td><?php echo $personal['Nombre']. ' '.$personal['Apellido'].' '.$personal['ApellidoDos']; ?></td>
+        <td><?php echo $personal['CorreoElectronico']; ?></td>
+        <td><?php echo $personal['Telefono']; ?></td>
+        <td><?php echo $personal['Direccion']; ?></td>
+        <td> <?php switch ($personal['Id_rol']) {
+            case 1: echo "Administrador/a"; break;
+            case 2: echo "Asistente"; break;
+            case 3: echo "Doctor/a"; break;
+            case 4: echo "Cajero/a"; break;
+            default: echo "Desconocido";
+        }?>
+        </td>
+        
+        <td><?php echo $personal['Estado'] == 1 ? 'Activo' : 'Inactivo'; ?></td>
         <td>
-            <a href="editarPersonal.php?id=2" class="btn btn-custom btn-outline-primary">
+            <a href="editarpersonal.php?id=<?php echo $personal['IdUsuario']; ?>" class="btn btn-custom btn-outline-primary">
                 <i class="bi bi-pencil-square"></i>
             </a>
         </td>
     </tr>
-    <tr>
-        <td>62526352</td>
-        <td>Maria López</td>
-        <td>887777</td>
-        <td>maria@gmail.com</td>
-        <td>Recepcionista</td>
-        <td>Sucursal 2</td>
-        <td>
-            <a href="editarPersonal.php?id=3" class="btn btn-custom btn-outline-primary">
-                <i class="bi bi-pencil-square"></i>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>62527463</td>
-        <td>Juan Pérez</td>
-        <td>889999</td>
-        <td>juan@gmail.com</td>
-        <td>Optometrista</td>
-        <td>Sucursal 1</td>
-        <td>
-            <a href="editarPersonal.php?id=4" class="btn btn-custom btn-outline-primary">
-                <i class="bi bi-pencil-square"></i>
-            </a>
-        </td>
-    </tr>
-     <tr>
-        <td>62528574</td>
-        <td>Ana Morales</td>
-        <td>880000</td>
-        <td>ana@gmail.com</td>
-        <td>Asistente de ventas</td>
-        <td>Sucursal 3</td>
-        <td>
-            <a href="editarPersonal.php?id=5" class="btn btn-custom btn-outline-primary">
-                <i class="bi bi-pencil-square"></i>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>62529685</td>
-        <td>Carlos Ruiz</td>
-        <td>881111</td>
-        <td>carlos@gmail.com</td>
-        <td>Administrador</td>
-        <td>Sucursal 2</td>
-        <td>
-            <a href="editarPersonal.php?id=6" class="btn btn-custom btn-outline-primary">
-                <i class="bi bi-pencil-square"></i>
-            </a>
-        </td>
-    </tr>
-      
+    <?php endforeach;?>
         </tbody>
     </table>
+  </div>
   </div>
 </main>
           <?php MostrarFooter(); ?>

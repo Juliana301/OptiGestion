@@ -11,14 +11,14 @@ function RegistrarPersonalModel($cedula, $nombre, $apellido, $apellidoDos, $corr
             throw new Exception($enlace->error);
         }
 
-        // 8 strings y 1 int → "ssssssssi"
+        // 8 strings y 1 int "ssssssssi"
         $sentencia->bind_param("ssssssssi", 
             $cedula, 
             $nombre, 
             $apellido, 
             $apellidoDos, 
             $correoElectronico, 
-            $contrasenna,  // ya viene con password_hash() desde el controlador
+            $contrasenna,  
             $telefono, 
             $direccion, 
             $rolId
@@ -52,7 +52,7 @@ function RegistrarPacienteModel($cedula, $nombre, $apellido, $apellidoDos, $corr
             $apellido, 
             $apellidoDos, 
             $correoElectronico, 
-            $contrasenna,  // ya viene hasheada
+            $contrasenna,  
             $telefono, 
             $direccion, 
             $fechaNacimiento

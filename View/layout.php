@@ -42,16 +42,6 @@ function MostrarMenu() {
                 <li><a class="dropdown-item" href="/OptiGestion/view/appointmentForm.php">Agendar Cita</a></li>
                 <li><a class="dropdown-item" href="/OptiGestion/view/historialMedico.php">Historial Médico</a></li>
             </ul>
-        </li>
-        
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-bs-toggle="dropdown">
-                Perfil
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPerfil">
-                <li><a class="dropdown-item" href="/OptiGestion/view/editarPerfil.php">Editar Perfil</a></li>
-                <li><a class="dropdown-item" href="/OptiGestion/logout.php">Cerrar Sesión</a></li>
-            </ul>
         </li>';
     }
 
@@ -173,7 +163,7 @@ function IncluirCSS() {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/OptiGestion/assets/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="/OptiGestion/assets/css/styles.css?v=1.5">
+    <link rel="stylesheet" href="/OptiGestion/assets/css/styles.css?v=1.7">
     
     ';
 }
