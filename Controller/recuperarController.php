@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $token = bin2hex(random_bytes(32));
     GuardarTokenRecuperacion($correo, $token);
 
-    $enlace = "http://localhost:8081/OptiGestion/View/restablecerContrasenna.php?token=$token";
+    $enlace = "http://localhost/OptiGestion/View/restablecerContrasenna.php?token=$token";
 
     // Datos del correo
     $correo_emisor = "linethleivacr@gmail.com";
